@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+hr {
+    width: 10%;
+    border: 2px solid yellow;
+}
+.head {
+    padding: 1rem 10%;
+    color: #fff;
+    background: linear-gradient(to bottom, #090992, #050553);
+    position: relative;
+}
+.nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+
+.hi {
+    padding-top: 5rem;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    font-size: 4rem;
+}
+.sub-head {
+    font-family: 'Castoro', serif;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+}
+.free {
+    color: #fce38a;
+}
+.download-btn {
+    margin: 5% 3% 5% 0;
+    background-color: #a6b1e1;
+    color: #311d3f;
+  }
+.mobile {
+    width : 20%;
+    border-radius: 10%;
+    position: absolute;
+    top: 5rem;
+    right: 12%;
+}
+.shelf {
+    text-align: center;
+    padding: 3rem 0;
+}
+.h2tag {
+    padding: 3% 0 0;
+}
+.madelove {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+}
+.features {
+    background-color: #394867;
+    color: #fff;
+}
+.feature-box {
+    text-align: center;
+    padding: 5%;
+}
+.icons {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+#footer {
+    background-color: #9ba4b4;
+    padding: 7% 15%;
+    text-align: center;
+  }
+.social-icons {
+    margin: 30px 20px;
+}
+.add {
+    color: #050553;
+    font-family: 'Castoro', serif;
+    background-color:  #9ba4b4;
+}
+.sread {
+    background-color:#050553;
+    font-size: 2rem;
+    box-shadow: 10px 5px 5px rgba(0,0,0,0.4);
+    border-color: black;
+}
+.start {
+    font-size: 2.5rem;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+/* To adjust the intro section */
+@media (min-width : 1230px) {
+    #appPara {
+        padding-top: 3rem;
+        font-size: 1.3rem;
+    }
+    .download-btn {
+        font-size: 2.1rem;
+    }
+}
+/* to adjust mobile book image */
+@media (max-width : 900px) {
+    .mobile {
+        position: static;
+        width: 60%;
+        padding: 2% 0;
+    }
+    .head {
+        text-align: center;
+    }
+}
+/* to adjust the book shelf image */
+@media (min-width : 1040px) {
+    .frontBooks {
+        width: 100%;
+    }
+}

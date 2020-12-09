@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title %> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://kit.fontawesome.com/829890c453.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Castoro&display=swap" rel="stylesheet">
+
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+    <link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a href="/" class="navbar-brand">Home</a> -->
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <% for(i in nav){ %> 
+            <li>
+            <a href="<%=nav[i].link%>"><%=nav[i].name %> </a>
+            </li>
+        <% } %> 
+      </ul>
+      
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Add Author
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <a href="/" class="shilib">ShiLib <i class="fas fa-book-reader"></i></a>
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          <form action="#" class="form-signin">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" placeholder="Name" id="name" required><br>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" class="form-control" placeholder="Date of Birth" id="dob" required><br>
+            <label for="work">Famous work</label>
+            <input type="text" class="form-control" placeholder="Name of the Books" id="work" required><br>
+            <label for="awards">Awards (if any)</label>
+            <input type="text" class="form-control" placeholder="eg:2020 Nobel Prize Winner, 2020 Rajya Puraskar.. etc." id="awards"><br>
+            <label for="pic">Photo</label>
+            <input type="file" class="form-control" id="pic" accept="image/*"><br>
+            <label for="des">Small Description</label><br>
+            <textarea name="" id="des" cols="30" rows="3" class="form-control"></textarea><br><br>
+            <button class="btn btn-primary form-control">Add </button><br>
+          </form>
+          <hr>
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+
+<hr>
+
+<hr>
+
+  <!-- footer -->
+  <footer id="footer">
+    <i class="social-icons fab fa-twitter"></i>
+    <i class="social-icons fab fa-facebook-f"></i>
+    <i class="social-icons fab fa-instagram"></i>
+    <i class="social-icons fas fa-envelope"></i>
+    <p>© 2020 ShiLib</p>
+
+  </footer>
+  <!-- /Footer -->
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>

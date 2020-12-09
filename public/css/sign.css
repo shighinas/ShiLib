@@ -1,0 +1,56 @@
+* {
+    text-align: center;
+}
+body {
+    background-color: rgb(204, 204, 224);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+h1 {
+    font-weight: 900;
+    padding: 5% 3%;
+}
+.main {
+    background-image: url(/images/sign_back.png);
+    /* background-attachment:fixed; */
+    background-size: cover;
+    width: 80%;
+    margin: 5% auto;
+    padding: 0;
+    box-shadow: 10px 5px 5px black;
+}
+.first {
+    background-color: #fff;
+    padding: 5% 3%;
+    color: #030381;
+}
+.second {
+    color: #fff;
+    padding: 5% 3%;
+}
+.secondContent {
+    margin: 20% auto;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.sub {
+    padding: 2% 10%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.footer {
+    position: absolute;
+    bottom: 5px;
+    right: 45%;
+}
+.hidden {
+    display: none;
+}
+@media (max-width : 770px) {
+ .footer{
+     position: static;
+ }
+}
