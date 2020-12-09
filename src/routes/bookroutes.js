@@ -21,7 +21,6 @@ function router(nav){
             img: "pathu.jpg"
         }
     ];
-    nav[2] = {link: '/books/new', name: 'Add new Book'};
     booksrouter.get('/', function(req, res){
         res.render('books',
             {

@@ -21,7 +21,6 @@ function router(nav){
             img: "basheer.jpg"
         }
     ];
-    nav[2] = {link: '/authors/new', name: 'Add new Author'};
     authorsrouter.get('/', function(req, res){
         res.render('authors',
             {
