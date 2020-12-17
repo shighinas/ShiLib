@@ -4,15 +4,13 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title><%=title %> </title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="https://kit.fontawesome.com/829890c453.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Castoro&display=swap" rel="stylesheet">
 
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		
+    <link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -34,12 +32,7 @@
             </li>
         <% } %> 
       </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li>
-          <a href="/">LogOut </a>
-        </li>
-        
-      </ul>
+      
     </nav>
   </div>
 </header>
@@ -48,7 +41,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1>Authors
+        <h1>Edit Author Details
           <p class="lead"></p>
         </h1>
       </div>
@@ -56,7 +49,7 @@
         <div class="well well-lg"> 
           <div class="row">
             <div class="col-sm-12 text-center">
-              <a href="/" class="shilib">ShiLib <i class="fas fa-book-reader"></i></a>
+              <a href="" class="shilib">ShiLib <i class="fas fa-book-reader"></i></a>
 			
             </div>
           </div>
@@ -83,39 +76,24 @@
       
       <div class="panel">
         <div class="panel-body">
+          <form method="POST" action="/admin/edauthor/<%=author._id %> " enctype="multipart/form-data" class="form-signin">
+            <label for="title">Full Name</label>
+            <input type="text" name="name" class="form-control" value="<%=author.name %>"><br>
+            <!-- <label for="author">Date of Birth</label>
+            <input type="text" name="dob" class="form-control" value="<%=author.dob %>"><br> -->
+            <label for="genre">Famous Work</label>
+            <input type="text" name="work" class="form-control" value="<%=author.work %> "><br>
+            <label for="awards">Awards (if any)</label>
+            <input type="text" name="awards" class="form-control" value="<%=author.awards %> "><br>
+            <label for="pic">Photo</label>
+            <input type="file" name="pic" class="form-control" id="pic" accept="image/*"><br>
+            <label for="review">Small Description</label><br>
+            <textarea name="des" cols="30" rows="3" class="form-control"><%=author.description %> </textarea><br><br>
+            <button class="form-control btn btn-success">Edit</button><br><br>
+            <a href="/admin/authors"><button type="button" class="form-control btn btn-danger">Cancel</button></a> <br>
+          </form>
           
-          
-          
-          <!--/stories-->
-          <% for(i=0;i<authors.length;i++){ %> 
-            <div class="row">    
-                <br>
-                <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="data:image/<%=authors[i].pic.contentType %>;base64,<%=authors[i].pic.data %>" style="width:100px;height:100px" class="img-circle"></a>
-                </div>
-                <div class="col-md-10 col-sm-9">
-                <h3><%=authors[i].name %> </h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                    <h4><span class="label label-default"><%=authors[i].awards %> </span></h4><h4>
-                    <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].work %>   • 
-                        <a href="/authors/<%=authors[i]._id %> " class="text-muted">Read More</a></small>
-                    </h4></div>
-                    <div class="col-xs-3"></div>
-                </div>
-                <br><br>
-                </div>
-            </div>
-            <hr>
-            <% } %> 
-          
-          
-          <!--/stories-->
-          
-          
-          <a href="#" class="btn btn-primary pull-right btnNext">More <i class="fas fa-chevron-right"></i></a>
-        
-          
+          <hr>
         </div>
       </div>
                                                                                        
@@ -129,23 +107,24 @@
 <hr>
 
 
-
 <hr>
 
 <hr>
 
-<!-- footer -->
-<footer id="footer">
-  <i class="social-icons fab fa-twitter"></i>
-  <i class="social-icons fab fa-facebook-f"></i>
-  <i class="social-icons fab fa-instagram"></i>
-  <i class="social-icons fas fa-envelope"></i>
-  <p>© 2020 ShiLib</p>
+  <!-- footer -->
+  <footer id="footer">
+    <i class="social-icons fab fa-twitter"></i>
+    <i class="social-icons fab fa-facebook-f"></i>
+    <i class="social-icons fab fa-instagram"></i>
+    <i class="social-icons fas fa-envelope"></i>
+    <p>© 2020 ShiLib</p>
 
-</footer>
-<!-- /Footer -->
+  </footer>
+  <!-- /Footer -->
+
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    
 	</body>
 </html>

@@ -1,48 +1,30 @@
 const express = require('express');
 const authorsrouter = express.Router();
+const authordata = require('../model/authordata');
 function router(nav){
-    var authors = [
-        {
-            title: "Joseph barbera",
-            book: "Tom &jerry",
-            genre: "Cartoon",
-            img: "joe.jpeg"
-        },
-        {
-            book: "Harry potter",
-            title: "J K Rowling",
-            genre: "Fantacy",
-            img: "jk.jpg"
-        },
-        {
-            book: "Pathummayude Aadu",
-            title: "Vaikam Muhammed Basheer",
-            genre: "Drama",
-            img: "basheer.jpg"
-        }
-    ];
+    
     authorsrouter.get('/', function(req, res){
-        res.render('authors',
+        authordata.find()
+        .then((authors)=> {
+            res.render('authors',
             {
                 nav,
                 title: 'ShiLib: The LIbrary',
                 authors
             });
+        });
     });
     authorsrouter.get('/:id', function(req, res){
-        const id = req.params.id;
-        if(id==='new'){
-            res.render('newauthor', {nav, title: 'ShiLib: The LIbrary'});
-        }
-        else {
-            author = authors[id];
+        var id = req.params.id;
+        authordata.findOne({_id : id})
+        .then( (author)=> {
             res.render('author',
-                {
-                    nav,
-                    title: 'ShiLib: The LIbrary',
-                    author
-                });
-        }
+            {
+                nav,
+                title: 'ShiLib: The Library',
+                author
+            });
+        });
     });
     return authorsrouter;
 }

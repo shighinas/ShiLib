@@ -15,6 +15,23 @@ h1,h2,h3,.highlight,.navbar a,#masthead h4 {
   font-family:'Oswald',arial narrow,sans-serif;
 }
 
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+.btnNext {
+  margin-left: 2%;
+}
+
 .shilib {
   font-family: 'Lobster', cursive;
   font-size: 7rem;
@@ -28,6 +45,13 @@ h1,h2,h3,.highlight,.navbar a,#masthead h4 {
   max-width: 430px;
   padding: 15px;
   margin: auto;
+}
+.review {
+  clear: both;
+  padding-left: 2%;
+  padding-right: 10%;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 footer {

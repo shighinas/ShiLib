@@ -26,6 +26,7 @@ $(document).ready(function(){
     
     $('#reg').on('submit', ()=>{
         var name = $('#regname').val();
+        var legalname = new RegExp('^[a-zA-Z]+$');
         var mail = $('#regemail').val();
         var phoneVal = $('#regnum').val();
         var phone = new RegExp('^[0-9]{10}$');
@@ -33,6 +34,10 @@ $(document).ready(function(){
         var passconfirm = $('#regconfirm').val();
         if(name=='' || mail=='' || phoneVal=='' || passVal=='' || passconfirm==''){
             alert("All fields are required.");
+            return false;
+        }
+        else if(name.length < 3 || !(legalname.test(name))){
+            alert("Username needs to be atleast 3 characters and only letters are allowed");
             return false;
         }
         else if(!(phone.test(phoneVal))){
@@ -48,7 +53,7 @@ $(document).ready(function(){
             return false;
         }
         else {
-            alert("Successfully created your account!")
+            console.log("Client validation done, redirected to server.")
             return true;
         }
     })

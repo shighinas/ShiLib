@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Castoro&display=swap" rel="stylesheet">
     
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,21 +34,10 @@
             <a href="<%=nav[i].link%>"><%=nav[i].name %> </a>
             </li>
         <% } %> 
-        <li>
-          <a href="/books/new">Add New Book </a>
-        </li>
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li>
           <a href="/">LogOut </a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="fas fa-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
         </li>
       </ul>
     </nav>
@@ -94,23 +83,21 @@
       
       <div class="panel">
         <div class="panel-body">
-          
-          
-          
+        
           <!--/stories-->
           <% for(i=0;i<books.length;i++){ %> 
             <div class="row">    
                 <br>
                 <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=books[i].img %> " style="width:100px;height:100px" class="img-circle"></a>
-                </div>
+                <a class="story-title" href="#"><img alt="" src="data:image/<%=books[i].pic.contentType %>;base64,<%=books[i].pic.data %>" style="width:100px;height:100px" class="img-circle"></a>
+              </div>
                 <div class="col-md-10 col-sm-9">
                 <h3><%=books[i].title %> </h3>
                 <div class="row">
                     <div class="col-xs-9">
                     <h4><span class="label label-default"><%=books[i].author %> </span></h4><h4>
                     <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].genre %>   • 
-                        <a href="/books/<%=i %> " class="text-muted">Read More</a></small>
+                        <a href="/books/<%=books[i]._id %> " class="text-muted">Read More</a></small>
                     </h4></div>
                     <div class="col-xs-3"></div>
                 </div>
@@ -158,6 +145,6 @@
 
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>

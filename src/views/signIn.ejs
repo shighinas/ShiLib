@@ -15,14 +15,19 @@
 <body>
     <div class="container-fluid main row">
         <div class="first col-md-7 signUp">
+            <% if(message.length > 0) { %> 
+                <div class="alert alert-primary">
+                    <%=message %>
+                </div>
+            <% } %>
             <h1>Sign In to ShiLib</h1>
             <button class="btn btn-light"> <i class="social-icons fab fa-facebook-f"></i> </button>
             <button class="btn btn-light"> <i class="social-icons fab fa-twitter"></i> </button>
             <button class="btn btn-light"> <i class="fab fa-google-plus-g"></i> </button><br><br>
             <p>or use your email account</p>
-            <form action="/books" class="form-signin" id="user">
-                <input type="email" class="form-control" placeholder=" Email" id="useremail" required><br>
-                <input type="password" class="form-control" placeholder="Password" id="userpass"><br>
+            <form action="/signIn/in" method="POST" class="form-signin" autocomplete="off">
+                <input type="email" name="email" class="form-control" placeholder=" Email" id="useremail" required><br>
+                <input type="password" name="pwd" class="form-control" placeholder="Password" id="userpass"><br>
                 <button class="btn btn-light">Forgot your password?</button><br><br>
                 <button class="btn btn-primary sub">Sign In</button><br>
             </form>
@@ -48,11 +53,11 @@
             <button class="btn btn-light"> <i class="social-icons fab fa-twitter"></i> </button>
             <button class="btn btn-light"> <i class="fab fa-google-plus-g"></i> </button><br>
             <p>or use your email for registration.</p>
-            <form action="/signIn" class="form-signin" id="reg">
-                <input type="text" class="form-control" placeholder="Name" id="regname" >
-                <input type="email" class="form-control" placeholder=" Email" id="regemail">
-                <input type="text" class="form-control" placeholder="Phone Number" id="regnum">
-                <input type="password" class="form-control" placeholder="Password" id="regpass">
+            <form action="/signIn/up" method="POST" class="form-signin" id="reg" autocomplete="off">
+                <input type="text" name="name" class="form-control" placeholder="UserName" id="regname" >
+                <input type="email" name="email" class="form-control" placeholder=" Email" id="regemail">
+                <input type="text" name="phone" class="form-control" placeholder="Phone Number" id="regnum">
+                <input type="password" name="pwd" class="form-control" placeholder="Password" id="regpass">
                 <input type="password" class="form-control" placeholder="Confirm Password" id="regconfirm"><br>
                 <button class="btn btn-primary sub">Sign Up</button><br>
             </form>

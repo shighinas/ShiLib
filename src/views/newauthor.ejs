@@ -76,19 +76,19 @@
       
       <div class="panel">
         <div class="panel-body">
-          <form action="#" class="form-signin">
+          <form method="POST" action="/admin/authoradd" enctype="multipart/form-data" class="form-signin" autocomplete="off">
             <label for="name">Full Name</label>
-            <input type="text" class="form-control" placeholder="Name" id="name" required><br>
+            <input type="text" name="name" class="form-control" placeholder="Name" required><br>
             <label for="dob">Date of Birth</label>
-            <input type="date" name="dob" class="form-control" placeholder="Date of Birth" id="dob" required><br>
+            <input type="date" name="dob" class="form-control" placeholder="Date of Birth" required><br>
             <label for="work">Famous work</label>
-            <input type="text" class="form-control" placeholder="Name of the Books" id="work" required><br>
+            <input type="text" name="work" class="form-control" placeholder="Name of the Books" required><br>
             <label for="awards">Awards (if any)</label>
-            <input type="text" class="form-control" placeholder="eg:2020 Nobel Prize Winner, 2020 Rajya Puraskar.. etc." id="awards"><br>
+            <input type="text" class="form-control" placeholder="eg:2020 Nobel Prize Winner, 2020 Rajya Puraskar.. etc." name="awards"><br>
             <label for="pic">Photo</label>
-            <input type="file" class="form-control" id="pic" accept="image/*"><br>
+            <input type="file" class="form-control" name="pic" accept="image/*" required><br>
             <label for="des">Small Description</label><br>
-            <textarea name="" id="des" cols="30" rows="3" class="form-control"></textarea><br><br>
+            <textarea name="des" cols="30" rows="3" class="form-control"></textarea><br><br>
             <button class="btn btn-primary form-control">Add </button><br>
           </form>
           <hr>
