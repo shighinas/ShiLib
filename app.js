@@ -5,7 +5,7 @@ const flash = require('connect-flash');
 
 const mongoose = require('mongoose');
 // connecting to the database
-mongoose.connect('mongodb+srv://userone:userone@shilib2.dlg5n.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex : true, useFindAndModify: false });
+mongoose.connect('mongodb://localhost/27017/LIBRARY', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex : true, useFindAndModify: false });
 
 const signupdata = require('./src/model/signupdata')
 const port = process.env.PORT || 9000;
