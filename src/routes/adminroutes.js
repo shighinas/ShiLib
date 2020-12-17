@@ -91,7 +91,7 @@ function router() {
         const id = req.params.id;
         bookdata.findByIdAndRemove({_id : id}, (err, book)=>{
             if(err){console.log("err")}
-            else{req.flash('info', 'Successfully deleted '+ book.title +' from books list')}
+            else{req.flash('info', 'Successfully deleted from books list')}
         })
         .then( (book)=>{
             
@@ -105,7 +105,7 @@ function router() {
         const id = req.params.id;
         authordata.findByIdAndRemove({_id : id}, (err, author)=>{
             if(err){console.log("err")}
-            else{req.flash('info', 'Successfully deleted '+ author.name +' from authors list')}
+            else{req.flash('info', 'Successfully deleted an author from authors list')}
         })
         .then( ()=>{
             res.redirect('/admin/authors')
